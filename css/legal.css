@@ -1,0 +1,110 @@
+/* Legal pages — imports main styles and adds reading-focused overrides */
+
+@import url('styles.css');
+
+main {
+  max-width: 720px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.25rem;
+  line-height: 1.65;
+}
+
+main h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+main h2 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+main h3 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+main p, main ul, main ol {
+  color: var(--text);
+}
+
+main ul, main ol {
+  padding-left: 1.25rem;
+}
+
+main li {
+  margin-bottom: 0.35rem;
+}
+
+main .lead-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+main .placeholder-block {
+  background: var(--warning-soft);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+main .placeholder-block strong {
+  color: var(--warning);
+}
+
+main .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+main .back-link:hover {
+  color: var(--text);
+}
+
+main a {
+  color: var(--primary);
+}
+
+main .storage-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+main .storage-table th,
+main .storage-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+main .storage-table th {
+  background: var(--surface-2);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+main code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--surface-2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
