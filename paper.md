@@ -26,11 +26,11 @@ bibliography: paper.bib
 
 # Statement of need
 
-Short knowledge checks have well-documented learning benefits [@Hattie2007]. The easiest way to implement these are multiple-choice items. But it is still a time-intensive task to prepare them. Constructing distractors that are plausible without being misleading, and explanations that address the most tempting wrong answer rather than merely restating the correct one, usually demands subject knowledge and substantial editorial effort [@haladyna2002]. The practical consequence is that many educators rely on a small, recycled item pool, or forgo formative quizzes altogether. 
+Short knowledge checks have well-documented learning benefits [@Hattie2007]. The easiest way to implement these are multiple-choice items. But it is still a time-intensive task to prepare them. Constructing distractors that are plausible without being misleading, and explanations that address the most tempting wrong answer rather than merely restating the correct one, usually demands subject knowledge and substantial editorial effort [@Haladyna2002]. The practical consequence is that many educators rely on a small, recycled item pool, or forgo formative quizzes altogether. 
 
-Large language models have demonstrated the ability to produce exam-quality multiple-choice items from source texts [@Kurdi2020] and to match or exceed the discriminatory power of hand-written items in several subject domains [@Moore2023]. Converting this capability into a tool that educators can actually adopt in the classroom, however, requires solving several further problems:
+Large language models have demonstrated the ability to produce exam-quality multiple-choice items from source texts and to match or exceed the discriminatory power of hand-written items in several subject domains [@Biancini2024]. Converting this capability into a tool that educators can actually adopt in the classroom, however, requires solving several further problems:
 
-1. **Privacy and data protection.** Lecture slides and handouts can contain preliminary research findings, clinical vignettes, or examination blueprints that educators are not able or willing to upload to a commercial LLM, e.g. ChatGPT or Claude. EU institutions are additionally constrained by the General Data Protection Regulation [@gdpr] and regional school-data-protection directives.
+1. **Privacy and data protection.** Lecture slides and handouts can contain preliminary research findings, clinical vignettes, or examination blueprints that educators are not able or willing to upload to a commercial LLM, e.g. ChatGPT or Claude. EU institutions are additionally constrained by the General Data Protection Regulation and regional school-data-protection directives.
 2. **Infrastructure and account friction.** Server-based tools require deployment, maintenance, and — almost universally — user accounts for both educator and learners.
 3. **Vendor lock-in.** Tools tied to a single LLM provider inherit that provider's pricing, availability, and data-retention policies.
 4. **Format incompatibility.** Generated items are typically delivered as formatted text that must be manually transferred into whichever quiz platform the educator uses, negating much of the time saving.
@@ -39,14 +39,14 @@ Large language models have demonstrated the ability to produce exam-quality mult
 
 # Pedagogical design
 
-The default item-generation prompt of `Quoodle Helper` is tuned for university-level exam items that assess conceptual understanding and transfer rather than text recall [@bloom1956]. Specifically, the prompt instructs the model to:
+The default item-generation prompt of `Quoodle Helper` is tuned for university-level exam items that assess conceptual understanding and transfer rather than text recall [@Krathwohl2002]. Specifically, the prompt instructs the model to:
 
 - Avoid phrasing such as "according to the text" or "laut Vorlesung" (according to the lecture), which anchor items to surface memory of the source rather than understanding of the concept.
 - Prefer questions about **relationships between concepts** over questions about isolated definitions.
 - Construct distractors of comparable length and grammatical form to the correct answer, and — where possible — target a specific, nameable misconception.
 - Write explanations that address the most tempting wrong answer, not merely restate the correct one.
 
-This prompt design is aligned with established item-writing guidelines for higher-education assessment [@haladyna2002] and with the principle that elaborative feedback on incorrect responses produces larger gains than correctness-only feedback [@roediger2011]. All columns generated and exported by `Quoodle Helper` correspond directly to the input collumns expected by Quoodle, which displays the multiple choice test in a learning-friendly way.
+This prompt design is aligned with established item-writing guidelines for higher-education assessment [@Haladyna2002] and with the principle that elaborative feedback on incorrect responses produces larger gains than correctness-only feedback [@Shute2008]. All columns generated and exported by `Quoodle Helper` correspond directly to the input collumns expected by Quoodle, which displays the multiple choice test in a learning-friendly way.
 
 Educators who work in specialised domains or who prefer a different assessment style can edit the system prompt through an **Advanced** panel in the configuration step. The edited prompt is stored locally in their browser so that this prompt can be re-used on subsequent visits; a single button reverts to the shipped template. This design gives educators direct control over item quality without requiring them to modify source code.
 
